@@ -3,6 +3,5 @@ const path = require("path");
 const PORT = process.env.PORT || 5000;
 
 express()
-  .use(express.static(path.join(__dirname, "public")))
-  .get("/", (req, res) => res.json(JSON.stringify({ test: 1 })))
+  .get("/", (req, res) => res.json({ test: 1 }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
